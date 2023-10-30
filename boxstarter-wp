@@ -53,15 +53,27 @@ if (Test-PendingReboot) { Invoke-Reboot }
 cinst -y python
 cinst -y pip
 
+## Go
+cinst golang
+
+## Flutter
+cinst flutter
+
+## Docker
+cinst docker-desktop
+cinst docker-cli
+
+## Azure AWS GCP
+cinst azure-cli
+cinst awscli
+cinst awstools.powershell
+cinst gcloudsdk
+
 if (Test-PendingReboot) { Invoke-Reboot }
 
 ## Basics
-cinst -y vlc
-cinst -y GoogleChrome
-cinst -y 7zip.install
 cinst -y sysinternals
 cinst -y paint.net
-cinst -y spotify
 
 # Remove unwanted Store apps
 Get-AppxPackage Facebook.Facebook | Remove-AppxPackage -ErrorAction SilentlyContinue
